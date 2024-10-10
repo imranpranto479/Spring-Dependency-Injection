@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define your beans here -->
+    <bean id="coder1" class="com.imranpranto.springbootproject.model.Coder">
+        <!-- <property name="id" value="1001"></property>
+        <property name="name" value="Mr. Adam"></property>
+        <property name="language" value="Java"></property>
+        <property name="computer" ref="computer1"></property> -->
+
+        <constructor-arg index="0" value="1001"></constructor-arg>
+        <constructor-arg index="1" value="Mr. Adam"></constructor-arg>
+        <constructor-arg index="2" value="Java"></constructor-arg>
+        <constructor-arg index="3" ref="computer1"></constructor-arg>
+    </bean>
+    <bean id="computer1" class="com.imranpranto.springbootproject.model.Computer">
+        <!-- <property name="brand" value="AMD"></property> -->
+        <constructor-arg index="0" value="Intel"></constructor-arg>
+
+    </bean>
+</beans>
